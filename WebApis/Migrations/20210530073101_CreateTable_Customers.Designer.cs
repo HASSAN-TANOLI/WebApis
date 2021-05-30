@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApis.Models;
 
 namespace WebApis.Migrations
 {
     [DbContext(typeof(EmployesDBContex))]
-    partial class EmployesDBContexModelSnapshot : ModelSnapshot
+    [Migration("20210530073101_CreateTable_Customers")]
+    partial class CreateTable_Customers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,7 +26,9 @@ namespace WebApis.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CustomersFullName");
+                    b.Property<string>("CustomersFirstName");
+
+                    b.Property<string>("CustomersLastName");
 
                     b.HasKey("Customersid");
 

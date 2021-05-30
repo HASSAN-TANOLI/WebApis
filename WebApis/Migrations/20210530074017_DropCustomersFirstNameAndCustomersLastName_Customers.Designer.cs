@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApis.Models;
 
 namespace WebApis.Migrations
 {
     [DbContext(typeof(EmployesDBContex))]
-    partial class EmployesDBContexModelSnapshot : ModelSnapshot
+    [Migration("20210530074017_DropCustomersFirstNameAndCustomersLastName_Customers")]
+    partial class DropCustomersFirstNameAndCustomersLastName_Customers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
